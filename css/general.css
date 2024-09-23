@@ -1,0 +1,19 @@
+p {
+
+    /* BOX */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    
+    /* TYPOGRAFIE */
+    font-family: Roboto, Arial;
+    
+    /* BOX */
+    margin: 0;
+    padding: 80px 24px 80px 96px;
+
+    /* KLEUR EN BACKGROUND */
+    background-color: rgb(248, 248, 248);
+}

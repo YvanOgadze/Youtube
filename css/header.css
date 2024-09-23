@@ -1,0 +1,203 @@
+.header {
+
+    /* BOX */
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+
+    /* KLEUR EN BACKGROUND */
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+
+}
+
+.left-section {
+
+    /* BOX */
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+
+    /* BOX */
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+
+    /* BOX */
+    height: 20px;
+}
+
+.middle-section {
+
+    /* BOX */
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+
+    /* TYPOGRAFIE */
+    font-size: 16px;
+
+    /* BOX */
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;       /* hierdoor zal de zoekbar krimpen (standaard heeft dit een minimale breedte waardoor dit niet volledig krimpt, hierdoor wel */
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-button {
+
+    /* BOX */
+    height: 40px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin-left: -1px;      /* hierdoor lijkt het alsof de button bij de searchbar hoort */
+    margin-right: 10px;
+
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-icon-container,
+.notifications-icon-container {
+
+    /* BOX */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+
+    /* TYPOGRAFIE */
+    font-size: 12px;
+
+    /* KLEUR EN BACKGROUND */
+    background-color: gray;
+    color: white;
+
+    /* BOX */
+    position: absolute;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    bottom: -40px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+.search-button:hover,
+.voice-search-button:hover,
+.upload-icon-container:hover,
+.youtube-icon-container:hover,
+.notifications-icon-container:hover {
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;    /* om iets rond te maken, doe je border-radius de helft van de hoogte */
+    border: none;
+    background-color: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+.right-section {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;     /*zorgt ervoor dat als de pagina kleiner wordt, de witruimte ertussen hetzelfde blijft ipv op elkaar te plakken */
+}
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-icon {
+    height: 24px;
+}
+
+.notifications-icon {
+    height: 24px;
+}
+
+.current-user {
+    height: 32px;
+    border-radius: 16px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200 0 0);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
+

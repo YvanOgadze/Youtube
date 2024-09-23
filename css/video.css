@@ -1,0 +1,77 @@
+.thumbnail {
+    width: 100%;
+    /* object-fit: cover;           dit zorgt ervoor dat de afbeelding de hoogt en breedte behoudt maar die zal aangepast worden */
+    /* object-fit: contain;         dit zorgt ervoor dat de afbeelding krimpt om binnen de dimensies te passen */
+    /* object-position: bottom;     kan ook right, top, bottom, center */
+    /* display: block;              dit zorgt ervoor dat de afbeelding in een blok zit, wat erna komt, komt het eronder */
+}
+
+.video-title {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;       /* gewonen lettertype is 400, 500 is medium en 700 is bold */
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-author, 
+.video-stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+    width: 36px;    /* Door 100% te doen, pakt de foto 100% van de ruimte van zijn containter, we hbben dit hierboven op 50px gezet, dus foto zal ook 50px zijn! */
+    border-radius: 50%;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video-time {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+}
